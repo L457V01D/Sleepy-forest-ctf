@@ -10,14 +10,14 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     if (req.body.key === "ilovecheese200311") {
-        res.send("\nCongrats you have found the flag key! call me xD!\nPHONE NUMBER: 28825413\n")
+        res.send("\n{flag}\n")
     } else {
-        res.send("\nDON'T BE SO STUPID I'VE ALREADY GAVE YOU THE KEY DUDE!")
+        res.send("\nDON'T BE SO STUPID I'VE ALREADY GAVE YOU THE KEY DUDE!\n")
     }
 })
 
 app.post('/checkflag', (req, res) => {
-    if (req.body.keyinput === "28825413") {
+    if (req.body.keyinput === "{flag}") {
         res.send("<h3 style='color: green'>The key is correct !</h3>")
     } else {
         res.send("<h3 style='color: red'>The key is not correct !</h3>")
